@@ -55,7 +55,7 @@
             test.addEventListener('input',function()
              {
                 let nameRegex = RegExp("^[A-Z]{1}[a-z]{2,}$");
-                if(nameRegex.test(text,value))
+                if(nameRegex.test(text.value))
                     textError.textContent = "";
                 else textError.textContent = "Name is Incorrect";
             });
@@ -71,7 +71,7 @@
             test.addEventListener('input',function()
              {
                 let emailRegex = RegExp("/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()\.,;\s@\"]+\.{0,1})+[^<>()\.,;:\s@\"]{2,})$/");
-                if(emailRegex.test(email,value))
+                if(emailRegex.test(email.value))
                         textContent = "";
                 else textContent = "Email is Incorrect";
             });
@@ -80,7 +80,7 @@
             test.addEventListener('input',function() 
             {
                 let numberRegex = RegExp('(\+91)?(-)?\s*?(91)?\s*?(\d{3})-?\s*?(\d{3})-?\s*?(\d{4})');
-                if(numberRegex.test(number,value))
+                if(numberRegex.test(number.value))
                     textContent = "";
                 else textContent = "Number is incorrect";
             });
@@ -89,7 +89,7 @@
             test.addEventListener('input',function()
             {
                 let pwdRegex = RegExp('^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()])(?=\\S+$).{8, 20}$');
-                if(pwdRegex.test(pwd,value))
+                if(pwdRegex.test(pwd.value))
                     textContent = "";
                 else textContent = "Number is incorrect";
             })
